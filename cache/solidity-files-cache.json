@@ -1,0 +1,79 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/carlosfdezdeus/Documents/MUniCS/1 MUniCS/BC - BlockChain/Laboratorio/Git - Lab 3/Practica3_JobFactory/contracts/FreelanceEscrow.sol": {
+      "lastModificationDate": 1765118692439,
+      "contentHash": "fa9ced0147a9323eb6ed15f6f05cbbd0",
+      "sourceName": "contracts/FreelanceEscrow.sol",
+      "solcConfig": {
+        "version": "0.8.30",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.30"
+      ],
+      "artifacts": [
+        "FreelanceEscrow"
+      ]
+    },
+    "/Users/carlosfdezdeus/Documents/MUniCS/1 MUniCS/BC - BlockChain/Laboratorio/Git - Lab 3/Practica3_JobFactory/contracts/JobFactory.sol": {
+      "lastModificationDate": 1765119290852,
+      "contentHash": "9e0449ba6860e4a691e05ac8490d17b6",
+      "sourceName": "contracts/JobFactory.sol",
+      "solcConfig": {
+        "version": "0.8.30",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./FreelanceEscrow.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.30"
+      ],
+      "artifacts": [
+        "JobFactory"
+      ]
+    }
+  }
+}
