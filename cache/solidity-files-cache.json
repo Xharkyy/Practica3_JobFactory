@@ -2,7 +2,7 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/carlosfdezdeus/Documents/MUniCS/1 MUniCS/BC - BlockChain/Laboratorio/Git - Lab 3/Practica3_JobFactory/contracts/FreelanceEscrow.sol": {
-      "lastModificationDate": 1765118692439,
+      "lastModificationDate": 1765238283133,
       "contentHash": "fa9ced0147a9323eb6ed15f6f05cbbd0",
       "sourceName": "contracts/FreelanceEscrow.sol",
       "solcConfig": {
@@ -38,8 +38,8 @@
       ]
     },
     "/Users/carlosfdezdeus/Documents/MUniCS/1 MUniCS/BC - BlockChain/Laboratorio/Git - Lab 3/Practica3_JobFactory/contracts/JobFactory.sol": {
-      "lastModificationDate": 1765119290852,
-      "contentHash": "9e0449ba6860e4a691e05ac8490d17b6",
+      "lastModificationDate": 1765238283133,
+      "contentHash": "687e6681cc201f028e45f9bd9c47792f",
       "sourceName": "contracts/JobFactory.sol",
       "solcConfig": {
         "version": "0.8.30",

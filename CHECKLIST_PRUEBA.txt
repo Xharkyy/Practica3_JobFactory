@@ -1,0 +1,212 @@
+# 📝 Checklist de Prueba Rápida
+
+## Antes de empezar ✓
+- [ ] Hardhat corriendo: `npx hardhat node`
+- [ ] Frontend corriendo: `npm run dev` (desde carpeta frontend)
+- [ ] MetaMask instalado en navegador
+- [ ] Browser abierto en `http://localhost:3000`
+
+---
+
+## Prueba 1: Conexión de Wallet (1 min)
+```
+[ ] Botón "Conectar Wallet" visible en esquina superior derecha
+[ ] Click en botón → MetaMask se abre
+[ ] Confirma conexión
+[ ] Botón cambia a VERDE con tu address
+[ ] Punto pulsante verde visible
+```
+
+---
+
+## Prueba 2: Publicar Trabajo (3 min)
+```
+[ ] Click en "+ Publicar trabajo"
+[ ] Llena:
+    Título: "API REST"
+    Desc: "Crear API con Node.js"
+    Budget: 2.5 ETH
+    Fecha: Mañana
+[ ] Click en "🚀 Publicar"
+[ ] Confirma en MetaMask
+[ ] Trabajo aparece con estado ⏳ (amarillo)
+```
+
+---
+
+## Prueba 3: Panel de Cliente (2 min)
+```
+[ ] Click en "📊 Panel de cliente"
+[ ] Verifica estadísticas:
+    - Total: 1
+    - Pendientes: 1
+    - Aceptados: 0
+    - Cancelados: 0
+[ ] Tu trabajo aparece en la lista
+```
+
+---
+
+## Prueba 4: Cambiar a Freelancer (1 min)
+```
+[ ] En MetaMask, crea/selecciona OTRA cuenta
+[ ] Recarga página (F5)
+[ ] La nueva dirección aparece en header
+```
+
+---
+
+## Prueba 5: Panel de Freelancer (2 min)
+```
+[ ] Click en "👨‍💼 Panel de freelancer"
+[ ] Verifica estadísticas:
+    - Aceptados: 0
+    - Disponibles: 1
+    - Ingresos: 0
+[ ] Tu trabajo aparece en "Trabajos disponibles"
+```
+
+---
+
+## Prueba 6: Aceptar Trabajo (2 min)
+```
+[ ] Click en "Aceptar trabajo" del trabajo disponible
+[ ] Confirma en MetaMask
+[ ] Recarga página (F5)
+[ ] Trabajo aparece en "Mis trabajos en progreso"
+[ ] Estado cambió a ✅ (verde)
+```
+
+---
+
+## Prueba 7: Filtros (2 min)
+```
+[ ] Vuelve a página principal
+[ ] Botón "Todos (📋)": Muestra todos los trabajos (1)
+[ ] Botón "Pendientes (⏳)": Muestra 0 (ya que fue aceptado)
+[ ] Botón "Aceptados (✅)": Muestra 1
+[ ] Botón "Cancelados (❌)": Muestra 0
+[ ] Los números en botones son correctos
+```
+
+---
+
+## Prueba 8: Validaciones (2 min)
+```
+[ ] Click en "+ Publicar trabajo"
+[ ] Enviar vacío → Error "Título requerido"
+[ ] Solo título → Error "Descripción requerida"
+[ ] Presupuesto = 0 → Error "Mayor a 0"
+[ ] Fecha pasada → Error "Fecha futura"
+[ ] Los errores aparecen en ROJO
+```
+
+---
+
+## Prueba 9: Visual UI (3 min)
+```
+HEADER:
+[ ] Logo "JF" con gradiente azul
+[ ] Sticky (se queda arriba al scroll)
+
+HERO:
+[ ] Fondo gradiente azul (blue-600 → blue-800)
+[ ] Título grande y claro
+
+CARDS:
+[ ] Cards de estadísticas con emojis
+[ ] Hover effects (sombra aumenta)
+
+JOB CARDS:
+[ ] Header amarillo para ⏳ Pendiente
+[ ] Header verde para ✅ Aceptado
+[ ] Presupuesto con símbolo Ξ
+[ ] Dirección en fondo gris
+
+BOTONES:
+[ ] Primarios: Azul (hover: más oscuro)
+[ ] Secundarios: Blanco con borde gris
+[ ] Transiciones suaves
+```
+
+---
+
+## Prueba 10: Desconexión (1 min)
+```
+[ ] Click en botón wallet (verde)
+[ ] Click en "Desconectar"
+[ ] Botón vuelve a AZUL
+[ ] Dice "Conectar MetaMask"
+[ ] Punto pulsante desaparece
+```
+
+---
+
+## Prueba 11: Acceso Restringido (1 min)
+```
+[ ] Intenta acceder a /client (sin wallet)
+[ ] Pantalla 🔒 "Acceso restringido"
+[ ] Dice "Conecta tu wallet"
+[ ] Same para /freelancer
+```
+
+---
+
+## Prueba 12: Navegación (1 min)
+```
+[ ] /client → click "← Volver" → /
+[ ] /freelancer → click "← Volver" → /
+[ ] / → click "Panel cliente" → /client
+[ ] / → click "Panel freelancer" → /freelancer
+[ ] Header y botones visibles en TODAS las páginas
+```
+
+---
+
+## Prueba 13: Responsive (opcional)
+```
+F12 → Toggle device → iPhone 12:
+[ ] Todo visible y clickeable
+[ ] Texto legible
+[ ] No hay scroll horizontal
+[ ] Botones amplios para tap
+
+Tablet (iPad):
+[ ] Layout se adapta
+[ ] Cards en 2 columnas
+
+Desktop (1280px):
+[ ] Layout completo
+[ ] Cards en 3-4 columnas
+```
+
+---
+
+## ✅ Resultado
+
+Si todo está marcado ✓:
+
+**🎉 ¡Tu aplicación está lista para producción!**
+
+---
+
+## 🐛 Troubleshooting Rápido
+
+| Problema | Solución |
+|----------|----------|
+| "Botón conectar no aparece" | Recarga página, verifica MetaMask instalado |
+| "No puedo conectar" | MetaMask debe estar en Localhost 8545 |
+| "Transacción falla" | Verifica que account tiene fondos en Hardhat |
+| "Datos no actualizan" | Recarga página (F5), espera 2 segundos |
+| "Errores en consola" | F12 → Console → reporta errores |
+
+---
+
+## ⏱️ Tiempo Total: ~25 minutos
+
+Cada prueba está calculada para completarse rápidamente.
+Si algo tarda más, revisa la sección de troubleshooting.
+
+---
+
+**Último paso**: Documenta los resultados y pasa a la siguiente fase de desarrollo.

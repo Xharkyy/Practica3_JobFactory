@@ -108,6 +108,8 @@ contract JobFactory {
         return jobId;
     }
 
+    
+
     /**
      * @notice Freelancer acepta un job publicado.
      *         Se despliega automáticamente el contrato escrow mediante clone.

@@ -1,0 +1,275 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║               📖 CÓMO PROBAR LA APLICACIÓN - GUÍA RÁPIDA                   ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+OPCIÓN 1: SCRIPT VISUAL INTERACTIVO ⭐ (RECOMENDADO)
+═══════════════════════════════════════════════════════════════════════════════
+
+Comando:
+  bash prueba_visual.sh
+
+Qué hace:
+  ✓ Te guía paso a paso
+  ✓ Muestra instrucciones claras
+  ✓ Explica qué verificar
+  ✓ Espera tu confirmación
+  ✓ Resumen final
+
+Tiempo: 30 minutos
+Dificultad: Muy fácil (solo sigue instrucciones)
+
+
+OPCIÓN 2: CHECKLIST RÁPIDO
+═══════════════════════════════════════════════════════════════════════════════
+
+Archivo: CHECKLIST_PRUEBA.txt
+
+Qué hacer:
+  1. Abre el archivo
+  2. Sigue cada prueba
+  3. Marca ✓ cuando termines
+  4. Al final, sabrás si todo funciona
+
+Tiempo: 25 minutos
+Dificultad: Fácil
+
+
+OPCIÓN 3: LECTURA COMPLETA
+═══════════════════════════════════════════════════════════════════════════════
+
+Archivos:
+  - QUICK_TEST.md: Resumen rápido (5 min lectura)
+  - PRUEBA_MANUAL.md: Guía completa (30 min lectura)
+  - UI_IMPROVEMENTS.md: Detalles de diseño
+
+Qué hacer:
+  1. Lee el archivo correspondiente
+  2. Sigue todas las instrucciones
+  3. Toma apuntes si lo necesitas
+
+Tiempo: Variable (20-45 min)
+Dificultad: Media
+
+
+OPCIÓN 4: LECTURA SUPER RÁPIDA
+═══════════════════════════════════════════════════════════════════════════════
+
+Archivo: INICIO_RAPIDO.md
+
+Qué hacer:
+  1. Lee el resumen de 5 pasos
+  2. Ejecuta rápidamente
+  3. Verifica checklist
+
+Tiempo: 20 minutos
+Dificultad: Fácil
+
+
+═══════════════════════════════════════════════════════════════════════════════
+MI RECOMENDACIÓN
+═══════════════════════════════════════════════════════════════════════════════
+
+PRIMER VEZ → Script visual (prueba_visual.sh)
+  Razones:
+  • Te explica todo paso a paso
+  • No tienes que leer documentación
+  • Es interactivo y ameno
+  • Al final sabes exactamente qué funcionó
+
+DESPUÉS DE SCRIPT → Checklist rápido (si quieres profundizar)
+  Razones:
+  • Verificas puntos específicos
+  • Puedes ir más rápido
+  • Formato de checklist es visual
+
+COMO REFERENCIA → Archivos Markdown
+  Razones:
+  • Documentación detallada
+  • Solucionar problemas
+  • Entender cómo funciona todo
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ANTES DE EMPEZAR: VERIFICACIONES INICIALES
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Abre 3 terminales diferentes:
+
+   Terminal 1 - Hardhat:
+   $ npx hardhat node
+   
+   Terminal 2 - Frontend:
+   $ cd frontend
+   $ npm run dev
+   
+   Terminal 3 - Verificación:
+   $ curl http://localhost:3000  # Debe responder 200
+
+
+2. Abre MetaMask en tu navegador
+
+3. Verifica que MetaMask está en:
+   Network: Localhost 8545
+   Chain ID: 31337
+
+
+4. Abre tu navegador en:
+   http://localhost:3000
+
+
+═══════════════════════════════════════════════════════════════════════════════
+FLUJO RESUMIDO (30 SEGUNDOS)
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Conecta wallet (botón esquina superior derecha)
+2. Publica un trabajo ("+ Publicar trabajo")
+3. Cambio de cuenta en MetaMask
+4. Acepta ese trabajo ("Panel freelancer" → "Aceptar")
+5. Verifica que el estado cambió a "✅ Aceptado"
+
+✓ Si todo funciona → Aplicación está lista
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ERRORES COMUNES Y SOLUCIONES
+═══════════════════════════════════════════════════════════════════════════════
+
+Problema: "No puedo conectar wallet"
+Solución:
+  1. Verifica que Hardhat está corriendo (Terminal 1)
+  2. Verifica que Frontend está corriendo (Terminal 2)
+  3. Recarga página (F5)
+  4. Abre DevTools (F12) y checa errores
+
+
+Problema: "MetaMask dice que la red es incorrecta"
+Solución:
+  1. En MetaMask, ve a Configuración → Redes
+  2. Verifica que existe "Localhost 8545"
+  3. Chain ID debe ser 31337
+  4. RPC URL debe ser http://localhost:8545
+
+
+Problema: "La transacción falla"
+Solución:
+  1. Verifica que tu account tiene fondos
+  2. En Hardhat, los accounts tienen 10000 ETH por defecto
+  3. Si no tiene, resetea: Ctrl+C en Terminal 1, luego npx hardhat node
+
+
+Problema: "Los datos no se actualizan"
+Solución:
+  1. Recarga página (F5)
+  2. Espera 2-3 segundos
+  3. Revisa consola (F12 → Console)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ESTRUCTURA DE LA PRUEBA
+═══════════════════════════════════════════════════════════════════════════════
+
+Cada prueba tiene 3 partes:
+
+1. INSTRUCCIONES: Qué hacer exactamente
+   ↓
+2. RESULTADO ESPERADO: Qué debería pasar
+   ↓
+3. VERIFICACIÓN: Cómo confirmar que funcionó
+
+Ejemplo:
+  INSTRUCCIONES: "Haz click en 'Conectar Wallet'"
+  RESULTADO ESPERADO: "MetaMask se abre pidiendo permisos"
+  VERIFICACIÓN: "El botón cambió a verde con tu address"
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ARCHIVOS DISPONIBLES
+═══════════════════════════════════════════════════════════════════════════════
+
+COMO_PROBAR.txt        ← Este archivo (orientación general)
+INICIO_RAPIDO.md       ← Super resumen con 4 opciones
+CHECKLIST_PRUEBA.txt   ← Checklist visual (marcas ✓)
+QUICK_TEST.md          ← Resumen con tabla
+PRUEBA_MANUAL.md       ← Guía completa y detallada
+UI_IMPROVEMENTS.md     ← Información sobre diseño
+
+prueba_visual.sh       ← Script ejecutable (script interactivo)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+DURACIÓN ESTIMADA
+═══════════════════════════════════════════════════════════════════════════════
+
+Opción 1 (Script visual):      30 minutos ⭐ RECOMENDADO
+Opción 2 (Checklist):          25 minutos
+Opción 3 (Lectura completa):   45 minutos
+Opción 4 (Ultra-rápido):       20 minutos
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PRÓXIMO PASO DESPUÉS DE PRUEBA
+═══════════════════════════════════════════════════════════════════════════════
+
+✓ Si todo funciona correctamente:
+  1. Documenta los resultados
+  2. Crea un resumen de lo probado
+  3. Pasa a la siguiente fase:
+     • Implementar JobDetail.js
+     • Implementar EscrowActions.js
+     • Pruebas más complejas
+
+✗ Si algo no funciona:
+  1. Abre DevTools (F12)
+  2. Revisa la consola de errores
+  3. Busca en PRUEBA_MANUAL.md la sección de solución de problemas
+  4. Reinicia Hardhat y Frontend
+  5. Intenta de nuevo
+
+
+═══════════════════════════════════════════════════════════════════════════════
+TIPS ÚTILES
+═══════════════════════════════════════════════════════════════════════════════
+
+Teclado:
+  F5         = Recarga la página
+  F12        = Abre DevTools (console, network, etc)
+  Ctrl+Shift+M = Toggle device toolbar (responsive)
+
+MetaMask:
+  • Cuenta = Su propia blockchain
+  • Network = Localhost 8545 para desarrollo local
+  • Chain ID = 31337 (local)
+
+Navegador:
+  • Console = Errores y logs
+  • Network = Solicitudes HTTP/RPC
+  • Application = Local Storage, Cookies
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ÉXITO 🎉
+═══════════════════════════════════════════════════════════════════════════════
+
+Si logras completar todas las pruebas:
+
+✅ Conectar wallet
+✅ Publicar trabajos
+✅ Aceptar trabajos
+✅ Filtrar por estado
+✅ Ver paneles de cliente/freelancer
+✅ Validaciones funcionando
+✅ UI se ve profesional
+
+→ Significa que tu aplicación está FUNCIONAL y LISTA para el siguiente paso.
+
+¡Felicidades! 🚀
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Última actualización: 9 de diciembre de 2024
+Versión: 1.0
+Autor: AI Assistant
+
