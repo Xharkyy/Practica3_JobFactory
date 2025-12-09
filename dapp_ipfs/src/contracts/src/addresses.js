@@ -1,5 +1,4 @@
 const addresses = {
-  escrow: "0xd8b934580fcE35a11B58C6D73aDeE468a2833fa8",     // dirección desplegada de FreelanceScrow
-  jobFactory: "0x...."   // dirección desplegada de JobFactory
+  jobFactory: "0xFd349ce432D41C33b57643D4dB34c1D4429D9482"   // dirección desplegada de JobFactory
 };
 export default addresses;
