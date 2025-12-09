@@ -2,37 +2,174 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  background-color: #050611; /* fondo oscuro */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Layout principal más tipo dashboard */
 .App-header {
-  background-color: #282c34;
+  background: radial-gradient(circle at top, #343b4f 0, #181b24 45%, #0e1016 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: stretch;
+  justify-content: flex-start;
+  font-size: 14px;
+  color: #f5f5f5;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 28px 20px 40px;
+  text-align: left;
+}
+
+/* Títulos */
+h2 {
+  margin-bottom: 6px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.App-header > p {
+  color: #a8afc3;
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+
+/* Tarjetas / secciones */
+.card {
+  background: rgba(15, 17, 26, 0.96);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  border: 1px solid rgba(90, 120, 255, 0.12);
+}
+
+/* Botones */
+.btn {
+  background: linear-gradient(135deg, #4a8ef7, #6b73ff);
+  border: none;
+  margin-top: 16px;
+  border-radius: 999px;
+  padding: 8px 18px;
   color: white;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #5b9dff, #7a82ff);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(65, 105, 225, 0.4);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* Formulario crear encargo */
+.job-form .form-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.job-form input,
+.job-form textarea {
+  width: 100%;
+  background: #12131c;
+  border: 1px solid #2b3042;
+  border-radius: 8px;
+  padding: 7px 9px;
+  color: #f5f5f5;
+  font-size: 13px;
+}
+
+.job-form input::placeholder,
+.job-form textarea::placeholder {
+  color: #666d86;
+}
+
+.job-form textarea {
+  resize: vertical;
+}
+
+/* Lista de encargos */
+.job-item {
+  border-top: 1px solid #2b3042;
+  padding-top: 10px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #8087a3;
+}
+
+.job-id {
+  font-weight: 500;
+}
+
+.job-escrow {
+  max-width: 55%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.job-title {
+  font-weight: 600;
+  margin-top: 5px;
+  font-size: 15px;
+  color: #f0f2ff;
+}
+
+.job-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.job-meta strong {
+  color: #c4c9e5;
+}
+
+.job-description {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #d4d8f2;
+}
+
+/* Zona de acciones */
+.actions {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Estado / mensajes */
+.status {
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .App-header {
+    padding: 20px 12px 32px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .job-escrow {
+    max-width: 100%;
   }
 }

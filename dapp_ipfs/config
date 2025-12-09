@@ -11,12 +11,11 @@
       ],
       "Access-Control-Allow-Methods": [
         "PUT",
-        "POST",
-        "GET"
+        "GET",
+        "POST"
       ],
       "Access-Control-Allow-Origin": [
-        "http://localhost:3000",
-        "http://127.0.0.1:3000"
+        "*"
       ]
     }
   },

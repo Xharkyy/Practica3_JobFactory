@@ -2,8 +2,8 @@ import FreelanceScrowAbi from "./abis/FreelanceScrowAbi.json";
 import JobFactoryAbi from "./abis/JobFactoryAbi.json";
 
 const abis = {
-escrow: FreelanceScrowAbi,
-jobfactory: JobFactoryAbi,
+  escrow: FreelanceScrowAbi,
+  jobFactory: JobFactoryAbi,   // <- F mayúscula, igual que en App.js
 };
-export default abis;
 
+export default abis;

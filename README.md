@@ -47,7 +47,7 @@ docker run -d --name ipfs_host
 ipfs/kubo
 
 
-3. Desplegar contratos (`FreelanceEscrow` y `JobFactory`) con Remix y actualizar las direcciones en `contracts.js`.
+3. Desplegar contratos (`FreelanceEscrow` y `JobFactory`) con Remix y actualizar las direcciones en `addresses.js`.
 
 ## Estado actual
 
